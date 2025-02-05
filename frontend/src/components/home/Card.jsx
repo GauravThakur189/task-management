@@ -17,7 +17,7 @@ const Card = ({ home, setInputDiv, data ,setUpdateData}) => {
   const handleCompleteTask = async (id) => {
     try {
       await axios.put(
-        `http://localhost:1000/api/v2/update-complete-task/${id}`,
+        `https://task-management-backend-gwin.onrender.com/api/v2/update-complete-task/${id}`,
         {},
         { headers }
       );
@@ -29,7 +29,7 @@ const Card = ({ home, setInputDiv, data ,setUpdateData}) => {
   const handleImportant = async (id) => {
     try {
       const response = await axios.put(
-        `http://localhost:1000/api/v2/update-imp-task/${id}`,
+        `https://task-management-backend-gwin.onrender.com/api/v2/update-imp-task/${id}`,
         {},
         { headers }
       );
@@ -41,7 +41,7 @@ const Card = ({ home, setInputDiv, data ,setUpdateData}) => {
   const deleteTask = async (id) => {
     try {
       const response = await axios.delete(
-        `http://localhost:1000/api/v2/delete-task/${id}`,
+        `https://task-management-backend-gwin.onrender.com/api/v2/delete-task/${id}`,
         {},
         { headers }
       );

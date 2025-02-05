@@ -25,7 +25,7 @@ const InputData = ({ inputDiv, setInputDiv, UpdateData, setUpdateData }) => {
     if (Data.title === "" || Data.desc === "") {
       alert("All fields are required");
     } else {
-      await axios.post("http://localhost:1000/api/v2/create-task", Data, {
+      await axios.post("https://task-management-backend-gwin.onrender.com/api/v2/create-task", Data, {
         headers,
       });
       setData({
@@ -43,7 +43,7 @@ const InputData = ({ inputDiv, setInputDiv, UpdateData, setUpdateData }) => {
       const id = UpdateData.id;
       console.log("updatedata id",id);
       
-      await axios.put(`http://localhost:1000/api/v2/update-task/${UpdateData.id}`, Data, {
+      await axios.put(`https://task-management-backend-gwin.onrender.com/api/v2/update-task/${UpdateData.id}`, Data, {
         headers,
       });
       setUpdateData({

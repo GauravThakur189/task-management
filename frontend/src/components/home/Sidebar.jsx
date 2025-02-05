@@ -39,7 +39,7 @@ const Sidebar = () => {
   useEffect(() => {
     const fetch = async () => {
       const response = await axios.get(
-        "http://localhost:1000/api/v2/get-all-tasks",
+        "https://task-management-backend-gwin.onrender.com/api/v2/get-all-tasks",
         {
           headers,
         }
